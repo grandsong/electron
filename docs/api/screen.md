@@ -38,7 +38,7 @@ let win
 app.on('ready', () => {
   let displays = electron.screen.getAllDisplays()
   let externalDisplay = displays.find((display) => {
-    return display.bounds.x !== 0 || display.bounds.y !== 0
+    return display.bounds.width > 0
   })
 
   if (externalDisplay) {
